@@ -1,0 +1,250 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------
+   Ayisha & Tahir — Bespoke Royal Wedding Stationery Design
+   Royal Maroon & 24K Gold Leaf Luxury Aesthetic:
+   - Royal Burgundy Velvet (#692C2C, #521F1F, #853737)
+   - Gleaming Metallic Gold Foil (#C5A059, #D4AF37, #F5E3B8)
+   - Warm Antique Cotton Parchment (#FAF6EE, #F5ECE0, #FFFDF9)
+   - Tactile Embossed Borders & Arabesque Corners
+   ------------------------------------------------------------------ */
+@theme {
+  --color-cream: #FAF6EE;
+  --color-cream-2: #F4ECE0;
+  --color-paper: #FFFDF9;
+  
+  /* Royal Velvet Burgundy (#692C2C) */
+  --color-burgundy-deep: #431616;
+  --color-burgundy: #692C2C;
+  --color-burgundy-light: #853737;
+  --color-burgundy-soft: #A34848;
+
+  /* Imperial Velvet Emerald */
+  --color-emerald-deep: #081A13;
+  --color-emerald: #0F2E23;
+  --color-emerald-light: #184635;
+  --color-emerald-soft: #285E4B;
+  --color-emerald-muted: #4F7565;
+
+  /* Gleaming Royal Gold Foil */
+  --color-gold: #C5A059;
+  --color-gold-light: #E8D3A7;
+  --color-gold-champagne: #F5E3B8;
+  --color-gold-dark: #8F6B28;
+  --color-gold-foil: #FAF0D8;
+
+  /* Rich Typographic Contrast */
+  --color-brown: #0E241C;
+  --color-brown-soft: #425B51;
+
+  --font-display: "Cinzel", "Times New Roman", serif;
+  --font-body: "Cormorant Garamond", Georgia, serif;
+  --font-arabic: "Amiri", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #692C2C;
+  color: var(--color-brown);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+::selection {
+  background: #692c2c;
+  color: #f5e3b8;
+}
+
+/* Luxury gold-burgundy scrollbar */
+::-webkit-scrollbar { width: 7px; }
+::-webkit-scrollbar-track { background: #4a1c1c; }
+::-webkit-scrollbar-thumb { background: #c5a059; border-radius: 99px; border: 2px solid #4a1c1c; }
+
+/* Subtle royal paper & arabesque texture */
+.paper-texture {
+  background-image:
+    radial-gradient(circle at 14% 15%, rgba(197, 160, 89, 0.16), transparent 50%),
+    radial-gradient(circle at 86% 85%, rgba(245, 227, 184, 0.1), transparent 50%);
+}
+
+/* Handcrafted Stationery Card Frame */
+.royal-card {
+  position: relative;
+  background: linear-gradient(180deg, #FFFDF9 0%, #FAF6EE 55%, #F5ECE0 100%);
+  border: 1.5px solid rgba(197, 160, 89, 0.75);
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.9),
+    0 20px 45px -12px rgba(8, 26, 19, 0.12),
+    0 8px 25px -8px rgba(197, 160, 89, 0.2);
+  border-radius: 1.25rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (min-width: 640px) {
+  .royal-card {
+    border-radius: 1.5rem;
+  }
+}
+
+/* Illuminated Gold Parchment Panel */
+.illuminated-panel {
+  background: linear-gradient(135deg, rgba(197, 160, 89, 0.08) 0%, rgba(245, 227, 184, 0.2) 50%, rgba(197, 160, 89, 0.08) 100%);
+  border: 1px solid rgba(197, 160, 89, 0.5);
+  box-shadow: inset 0 1px 3px rgba(197, 160, 89, 0.12);
+  border-radius: 0.85rem;
+}
+
+/* Royal Velvet Burgundy Button (#692C2C) */
+.btn-emerald,
+.btn-royal-emerald,
+.btn-burgundy,
+.btn-royal-burgundy {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  background: linear-gradient(135deg, #692c2c 0%, #853737 50%, #4d1e1e 100%);
+  color: #fffdf9;
+  font-family: var(--font-display); font-size: 0.66rem; font-weight: 600;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 0.7rem 1.35rem; border: 1.5px solid #c5a059;
+  border-radius: 9999px;
+  white-space: nowrap;
+  min-height: 2.75rem;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer; text-align: center;
+  box-shadow: 0 4px 14px rgba(105, 44, 44, 0.22), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+@media (min-width: 640px) {
+  .btn-emerald,
+  .btn-royal-emerald,
+  .btn-burgundy,
+  .btn-royal-burgundy {
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    padding: 0.75rem 1.55rem;
+    min-height: 3rem;
+  }
+}
+.btn-emerald:hover,
+.btn-royal-emerald:hover,
+.btn-burgundy:hover,
+.btn-royal-burgundy:hover {
+  background: linear-gradient(135deg, #7c3535 0%, #994444 50%, #602525 100%);
+  border-color: #f5e3b8;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(105, 44, 44, 0.35), 0 0 15px rgba(197, 160, 89, 0.3);
+}
+
+/* Gilded Gold Leaf Button */
+.btn-gold,
+.btn-royal-gold {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  background: linear-gradient(135deg, #c5a059 0%, #f5e3b8 50%, #b58a45 100%);
+  color: #081a13;
+  font-family: var(--font-display); font-size: 0.66rem; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 0.7rem 1.35rem; border: 1.5px solid #c5a059;
+  border-radius: 9999px;
+  white-space: nowrap;
+  min-height: 2.75rem;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer; text-align: center;
+  box-shadow: 0 4px 14px rgba(197, 160, 89, 0.25), 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+@media (min-width: 640px) {
+  .btn-gold,
+  .btn-royal-gold {
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    padding: 0.75rem 1.55rem;
+    min-height: 3rem;
+  }
+}
+.btn-gold:hover,
+.btn-royal-gold:hover {
+  background: linear-gradient(135deg, #987532 0%, #e8d3a7 50%, #987532 100%);
+  border-color: #987532;
+  color: #081a13;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(197, 160, 89, 0.4);
+}
+
+/* Royal Outline Button */
+.btn-outline,
+.btn-royal-outline {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  background: rgba(255, 253, 249, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #692c2c;
+  font-family: var(--font-display); font-size: 0.66rem; font-weight: 600;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 0.7rem 1.35rem; border: 1.5px solid rgba(197, 160, 89, 0.85);
+  border-radius: 9999px;
+  white-space: nowrap;
+  min-height: 2.75rem;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer; text-align: center;
+  box-shadow: 0 2px 8px rgba(197, 160, 89, 0.15), 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+@media (min-width: 640px) {
+  .btn-outline,
+  .btn-royal-outline {
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    padding: 0.75rem 1.55rem;
+    min-height: 3rem;
+  }
+}
+.btn-outline:hover,
+.btn-royal-outline:hover {
+  background: #ffffff;
+  border-color: #692c2c;
+  color: #4d1e1e;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(105, 44, 44, 0.2), 0 0 10px rgba(197, 160, 89, 0.2);
+}
+
+/* Gentle reveal on scroll — added by the small useReveal hook */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes gentle-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+.gentle-float { animation: gentle-float 3.5s ease-in-out infinite; }
+
+@keyframes music-bar {
+  0%, 100% { height: 4px; }
+  50% { height: 16px; }
+}
+
+/* Print: print only the recreated invitation card */
+@media print {
+  body { background: #ffffff; }
+  .no-print { display: none !important; }
+  main > section { display: none !important; }
+  main > section#invitation { display: block !important; padding: 0 !important; }
+  #invitation > div > div:first-child { display: none !important; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+}
