@@ -12,7 +12,7 @@
   --color-cream: #FAF6EE;
   --color-cream-2: #F4ECE0;
   --color-paper: #FFFDF9;
-  
+
   /* Royal Velvet Burgundy (#692C2C) */
   --color-burgundy-deep: #431616;
   --color-burgundy: #692C2C;
@@ -69,9 +69,19 @@ body {
 }
 
 /* Luxury gold-burgundy scrollbar */
-::-webkit-scrollbar { width: 7px; }
-::-webkit-scrollbar-track { background: #4a1c1c; }
-::-webkit-scrollbar-thumb { background: #c5a059; border-radius: 99px; border: 2px solid #4a1c1c; }
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #4a1c1c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c5a059;
+  border-radius: 99px;
+  border: 2px solid #4a1c1c;
+}
 
 /* Subtle royal paper & arabesque texture */
 .paper-texture {
@@ -112,7 +122,10 @@ body {
 .btn-royal-emerald,
 .btn-burgundy,
 .btn-royal-burgundy {
-  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   background: linear-gradient(135deg, #692c2c 0%, #853737 50%, #4d1e1e 100%);
   color: #fffdf9;
   font-family: var(--font-display); font-size: 0.66rem; font-weight: 600;
@@ -124,10 +137,13 @@ body {
   box-sizing: border-box;
   max-width: 100%;
   transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
-  cursor: pointer; text-align: center;
+  cursor: pointer;
+  text-align: center;
   box-shadow: 0 4px 14px rgba(105, 44, 44, 0.22), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
+
 @media (min-width: 640px) {
+
   .btn-emerald,
   .btn-royal-emerald,
   .btn-burgundy,
@@ -138,6 +154,7 @@ body {
     min-height: 2.85rem;
   }
 }
+
 .btn-emerald:hover,
 .btn-royal-emerald:hover,
 .btn-burgundy:hover,
@@ -152,7 +169,10 @@ body {
 /* Gilded Gold Leaf Button */
 .btn-gold,
 .btn-royal-gold {
-  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   background: linear-gradient(135deg, #c5a059 0%, #f5e3b8 50%, #b58a45 100%);
   color: #081a13;
   font-family: var(--font-display); font-size: 0.66rem; font-weight: 700;
@@ -164,10 +184,13 @@ body {
   box-sizing: border-box;
   max-width: 100%;
   transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
-  cursor: pointer; text-align: center;
+  cursor: pointer;
+  text-align: center;
   box-shadow: 0 4px 14px rgba(197, 160, 89, 0.25), 0 1px 3px rgba(0, 0, 0, 0.06);
 }
+
 @media (min-width: 640px) {
+
   .btn-gold,
   .btn-royal-gold {
     font-size: 0.7rem;
@@ -176,6 +199,7 @@ body {
     min-height: 2.85rem;
   }
 }
+
 .btn-gold:hover,
 .btn-royal-gold:hover {
   background: linear-gradient(135deg, #987532 0%, #e8d3a7 50%, #987532 100%);
@@ -188,7 +212,10 @@ body {
 /* Royal Outline Button */
 .btn-outline,
 .btn-royal-outline {
-  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   background: rgba(255, 253, 249, 0.95);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -202,10 +229,13 @@ body {
   box-sizing: border-box;
   max-width: 100%;
   transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
-  cursor: pointer; text-align: center;
+  cursor: pointer;
+  text-align: center;
   box-shadow: 0 2px 8px rgba(197, 160, 89, 0.15), 0 1px 2px rgba(0, 0, 0, 0.04);
 }
+
 @media (min-width: 640px) {
+
   .btn-outline,
   .btn-royal-outline {
     font-size: 0.7rem;
@@ -214,6 +244,7 @@ body {
     min-height: 2.85rem;
   }
 }
+
 .btn-outline:hover,
 .btn-royal-outline:hover {
   background: #ffffff;
@@ -229,28 +260,65 @@ body {
   transform: translateY(18px);
   transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
 
 @keyframes gentle-float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
 }
-.gentle-float { animation: gentle-float 3.5s ease-in-out infinite; }
+
+.gentle-float {
+  animation: gentle-float 3.5s ease-in-out infinite;
+}
 
 @keyframes music-bar {
-  0%, 100% { height: 4px; }
-  50% { height: 16px; }
+
+  0%,
+  100% {
+    height: 4px;
+  }
+
+  50% {
+    height: 16px;
+  }
 }
 
 /* Print: print only the recreated invitation card */
 @media print {
-  body { background: #ffffff; }
-  .no-print { display: none !important; }
-  main > section { display: none !important; }
-  main > section#invitation { display: block !important; padding: 0 !important; }
-  #invitation > div > div:first-child { display: none !important; }
-  .reveal { opacity: 1 !important; transform: none !important; }
+  body {
+    background: #ffffff;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  main>section {
+    display: none !important;
+  }
+
+  main>section#invitation {
+    display: block !important;
+    padding: 0 !important;
+  }
+
+  #invitation>div>div:first-child {
+    display: none !important;
+  }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
