@@ -64,7 +64,7 @@ export default function Events() {
         {/* ================= 2-COLUMN ROYAL STATIONERY CARDS ================= */}
         <div className="mt-8 sm:mt-10 grid items-stretch gap-6 md:grid-cols-2 max-w-4xl mx-auto">
           {/* ----------------- EVENT 01: NIKAH ----------------- */}
-          <article className="reveal group relative flex flex-col justify-between rounded-2xl sm:rounded-3xl border-2 border-gold/75 bg-gradient-to-b from-[#FFFDF9] via-[#FAF6EE] to-[#F5ECE0] p-5 sm:p-7 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.45),0_8px_25px_-8px_rgba(197,160,89,0.25)] transition-all duration-300 hover:border-gold hover:shadow-[0_24px_55px_-10px_rgba(0,0,0,0.55)]">
+          <article className="reveal group relative flex flex-col justify-between rounded-2xl sm:rounded-3xl border-2 border-gold/75 bg-gradient-to-b from-[#FFFDF9] via-[#FAF6EE] to-[#F5ECE0] p-4 sm:p-6 md:p-6 lg:p-7 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.45),0_8px_25px_-8px_rgba(197,160,89,0.25)] transition-all duration-300 hover:border-gold hover:shadow-[0_24px_55px_-10px_rgba(0,0,0,0.55)]">
             <div>
               {/* Badge & Number */}
               <div className="flex items-center justify-between border-b border-gold/25 pb-3">
@@ -131,28 +131,29 @@ export default function Events() {
             </div>
 
             {/* Actions */}
-            <div className="mt-6 flex flex-col gap-2.5 sm:flex-row">
+            <div className="mt-6 flex flex-col gap-2.5 sm:flex-row md:flex-col lg:flex-row">
               <a
                 href={WEDDING.nikah.mapDirections}
                 target="_blank"
                 rel="noreferrer"
-                className="btn-royal-emerald flex-1 text-[0.62rem] sm:text-[0.66rem] !py-2.5"
+                className="btn-royal-emerald flex-1 w-full min-w-0 text-[0.62rem] sm:text-[0.66rem] !px-2.5 sm:!px-3 !py-2.5 justify-center tracking-wider"
               >
-                <Navigation className="h-3 w-3 text-gold-foil" />
-                <span>Get Directions</span>
+                <Navigation className="h-3 w-3 shrink-0 text-gold-foil" />
+                <span className="truncate sm:whitespace-normal">Get Directions</span>
               </a>
               <button
+                type="button"
                 onClick={() => downloadCalendar("nikah")}
-                className="btn-royal-outline flex-1 text-[0.62rem] sm:text-[0.66rem] !py-2.5"
+                className="btn-royal-outline flex-1 w-full min-w-0 text-[0.62rem] sm:text-[0.66rem] !px-2.5 sm:!px-3 !py-2.5 justify-center tracking-wider cursor-pointer"
               >
-                <CalendarPlus className="h-3 w-3 text-gold" />
-                <span>Add to Calendar</span>
+                <CalendarPlus className="h-3 w-3 shrink-0 text-gold" />
+                <span className="truncate sm:whitespace-normal">Add to Calendar</span>
               </button>
             </div>
           </article>
 
           {/* ----------------- EVENT 02: VALIMA ----------------- */}
-          <article className="reveal group relative flex flex-col justify-between rounded-2xl sm:rounded-3xl border-2 border-gold/75 bg-gradient-to-b from-[#FFFDF9] via-[#FAF6EE] to-[#F5ECE0] p-5 sm:p-7 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.45),0_8px_25px_-8px_rgba(197,160,89,0.25)] transition-all duration-300 hover:border-gold hover:shadow-[0_24px_55px_-10px_rgba(0,0,0,0.55)]">
+          <article className="reveal group relative flex flex-col justify-between rounded-2xl sm:rounded-3xl border-2 border-gold/75 bg-gradient-to-b from-[#FFFDF9] via-[#FAF6EE] to-[#F5ECE0] p-4 sm:p-6 md:p-6 lg:p-7 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.45),0_8px_25px_-8px_rgba(197,160,89,0.25)] transition-all duration-300 hover:border-gold hover:shadow-[0_24px_55px_-10px_rgba(0,0,0,0.55)]">
             <div>
               {/* Badge & Number */}
               <div className="flex items-center justify-between border-b border-gold/25 pb-3">
@@ -219,22 +220,23 @@ export default function Events() {
             </div>
 
             {/* Actions */}
-            <div className="mt-6 flex flex-col gap-2.5 sm:flex-row">
+            <div className="mt-6 flex flex-col gap-2.5 sm:flex-row md:flex-col lg:flex-row">
               <a
                 href={WEDDING.valima.mapDirections}
                 target="_blank"
                 rel="noreferrer"
-                className="btn-royal-emerald flex-1 text-[0.62rem] sm:text-[0.66rem] !py-2.5"
+                className="btn-royal-emerald flex-1 w-full min-w-0 text-[0.62rem] sm:text-[0.66rem] !px-2.5 sm:!px-3 !py-2.5 justify-center tracking-wider"
               >
-                <Navigation className="h-3 w-3 text-gold-foil" />
-                <span>Get Directions</span>
+                <Navigation className="h-3 w-3 shrink-0 text-gold-foil" />
+                <span className="truncate sm:whitespace-normal">Get Directions</span>
               </a>
               <button
+                type="button"
                 onClick={() => downloadCalendar("valima")}
-                className="btn-royal-outline flex-1 text-[0.62rem] sm:text-[0.66rem] !py-2.5"
+                className="btn-royal-outline flex-1 w-full min-w-0 text-[0.62rem] sm:text-[0.66rem] !px-2.5 sm:!px-3 !py-2.5 justify-center tracking-wider cursor-pointer"
               >
-                <CalendarPlus className="h-3 w-3 text-gold" />
-                <span>Add to Calendar</span>
+                <CalendarPlus className="h-3 w-3 shrink-0 text-gold" />
+                <span className="truncate sm:whitespace-normal">Add to Calendar</span>
               </button>
             </div>
           </article>

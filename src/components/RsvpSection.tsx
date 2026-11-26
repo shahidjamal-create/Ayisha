@@ -156,7 +156,7 @@ export default function RsvpSection() {
                 <span className="font-display block text-[0.68rem] sm:text-xs font-semibold tracking-wider text-emerald-deep uppercase">
                   Your Response <span className="text-gold">*</span>
                 </span>
-                <div className="mt-2 grid grid-cols-2 gap-3">
+                <div className="mt-2 grid grid-cols-1 min-[380px]:grid-cols-2 gap-2.5 sm:gap-3">
                   <label
                     onClick={() => setAttendance("accept")}
                     className={`flex items-center justify-center gap-2 rounded-xl border p-2.5 text-center cursor-pointer transition-all select-none ${

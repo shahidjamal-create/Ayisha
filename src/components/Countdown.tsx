@@ -88,16 +88,16 @@ export default function Countdown() {
               </div>
 
               {/* 4 Gilded Royal Timepiece Cards */}
-              <div className="mx-auto mt-5 sm:mt-6 grid grid-cols-4 gap-2 sm:gap-3.5 max-w-md" role="timer" aria-live="off">
+              <div className="mx-auto mt-5 sm:mt-6 grid grid-cols-4 gap-1.5 sm:gap-3.5 max-w-md" role="timer" aria-live="off">
                 {boxes.map((box) => (
                   <div
                     key={box.label}
-                    className="group relative flex flex-col items-center justify-center rounded-xl sm:rounded-2xl border border-gold/50 bg-gradient-to-b from-white via-[#FAF7F0] to-[#F5ECE0] p-2.5 sm:p-4 text-center shadow-2xs transition-all duration-300 hover:border-gold hover:-translate-y-1 hover:shadow-md"
+                    className="group relative flex flex-col items-center justify-center rounded-xl sm:rounded-2xl border border-gold/50 bg-gradient-to-b from-white via-[#FAF7F0] to-[#F5ECE0] p-2 sm:p-4 text-center shadow-2xs transition-all duration-300 hover:border-gold hover:-translate-y-1 hover:shadow-md"
                   >
-                    <span className="font-display block text-2xl sm:text-3xl md:text-4xl font-semibold text-emerald-deep tabular-nums leading-none tracking-tight drop-shadow-[0_1px_1px_rgba(197,160,89,0.2)]">
+                    <span className="font-display block text-xl sm:text-3xl md:text-4xl font-semibold text-emerald-deep tabular-nums leading-none tracking-tight drop-shadow-[0_1px_1px_rgba(197,160,89,0.2)]">
                       {String(box.value).padStart(2, "0")}
                     </span>
-                    <span className="font-display mt-1.5 sm:mt-2 block text-[0.52rem] sm:text-[0.62rem] font-bold tracking-[0.22em] text-gold-dark uppercase">
+                    <span className="font-display mt-1 sm:mt-2 block text-[0.48rem] sm:text-[0.62rem] font-bold tracking-[0.16em] sm:tracking-[0.22em] text-gold-dark uppercase truncate w-full">
                       {box.label}
                     </span>
                   </div>
@@ -116,22 +116,22 @@ export default function Countdown() {
                 <button
                   type="button"
                   onClick={() => downloadCalendar("nikah")}
-                  className="btn-royal-emerald group/btn h-11 sm:h-12 w-full !px-3 font-display text-[0.62rem] sm:text-[0.68rem] font-semibold tracking-wider uppercase whitespace-nowrap flex items-center justify-center gap-2 cursor-pointer shadow-sm"
+                  className="btn-royal-emerald group/btn h-11 sm:h-12 w-full min-w-0 !px-2.5 sm:!px-3 font-display text-[0.62rem] sm:text-[0.68rem] font-semibold tracking-wider uppercase flex items-center justify-center gap-2 cursor-pointer shadow-sm"
                   aria-label="Download Nikah calendar event"
                 >
                   <CalendarPlus className="h-3.5 w-3.5 text-gold-foil shrink-0 transition-transform duration-200 group-hover/btn:scale-110" />
-                  <span>ADD TO CALENDAR</span>
+                  <span className="truncate sm:whitespace-normal">ADD TO CALENDAR</span>
                 </button>
 
                 <a
                   href={googleCalendarUrl("nikah")}
                   target="_blank"
                   rel="noreferrer"
-                  className="btn-royal-outline group/btn h-11 sm:h-12 w-full !px-3 font-display text-[0.62rem] sm:text-[0.68rem] font-semibold tracking-wider uppercase whitespace-nowrap flex items-center justify-center gap-2 cursor-pointer shadow-2xs"
+                  className="btn-royal-outline group/btn h-11 sm:h-12 w-full min-w-0 !px-2.5 sm:!px-3 font-display text-[0.62rem] sm:text-[0.68rem] font-semibold tracking-wider uppercase flex items-center justify-center gap-2 cursor-pointer shadow-2xs"
                   aria-label="Add to Google Calendar"
                 >
                   <ExternalLink className="h-3.5 w-3.5 text-gold shrink-0 transition-transform duration-200 group-hover/btn:scale-110" />
-                  <span>GOOGLE CALENDAR</span>
+                  <span className="truncate sm:whitespace-normal">GOOGLE CALENDAR</span>
                 </a>
               </div>
             </div>

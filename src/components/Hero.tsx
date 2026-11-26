@@ -115,21 +115,21 @@ export default function Hero() {
             <button
               type="button"
               onClick={() => scrollToId("invitation")}
-              className="btn-royal-emerald group/btn h-11 sm:h-12 w-full sm:flex-1 !px-3 sm:!px-4 font-display text-[0.66rem] sm:text-[0.7rem] font-semibold tracking-wider uppercase flex items-center justify-center gap-2 cursor-pointer shadow-md"
+              className="btn-royal-emerald group/btn h-11 sm:h-12 w-full min-w-0 sm:flex-1 !px-2.5 sm:!px-4 font-display text-[0.66rem] sm:text-[0.7rem] font-semibold tracking-wider uppercase flex items-center justify-center gap-2 cursor-pointer shadow-md"
               aria-label="View official wedding invitation"
             >
               <Mail className="h-4 w-4 text-gold-foil shrink-0 transition-transform duration-200 group-hover/btn:scale-110" />
-              <span>VIEW INVITATION</span>
+              <span className="truncate sm:whitespace-normal">VIEW INVITATION</span>
             </button>
 
             <button
               type="button"
               onClick={() => scrollToId("events")}
-              className="btn-royal-outline group/btn h-11 sm:h-12 w-full sm:flex-1 !px-3 sm:!px-4 font-display text-[0.66rem] sm:text-[0.7rem] font-semibold tracking-wider uppercase flex items-center justify-center gap-2 cursor-pointer shadow-sm"
+              className="btn-royal-outline group/btn h-11 sm:h-12 w-full min-w-0 sm:flex-1 !px-2.5 sm:!px-4 font-display text-[0.66rem] sm:text-[0.7rem] font-semibold tracking-wider uppercase flex items-center justify-center gap-2 cursor-pointer shadow-sm"
               aria-label="View ceremonies and events schedule"
             >
               <Calendar className="h-4 w-4 text-gold shrink-0 transition-transform duration-200 group-hover/btn:scale-110" />
-              <span>CEREMONIES</span>
+              <span className="truncate sm:whitespace-normal">CEREMONIES</span>
             </button>
           </div>
         </div>
